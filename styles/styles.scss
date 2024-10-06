@@ -177,7 +177,7 @@ main {
   & div {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 40%;
     height: 300px;
 
     margin-bottom: 100px;
@@ -449,6 +449,19 @@ main {
   }
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 
 
 /*responsive*/
@@ -499,13 +512,13 @@ main {
 }
 
 @media(max-width:768px) {
-  main #init-info img {
+  #init-info img {
     width: 250px;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
 
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -580,16 +593,16 @@ main {
     padding: 7px 0px;
   }
 
-  main #init-info {
+  #init-info {
     display: flex;
     flex-direction: column;
   }
 
-  main #init-info article {
+  #init-info article {
     text-align: center;
   }
 
-  main #init-info article {
+  #init-info article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -614,7 +627,7 @@ main {
     width: 170%;
   }
 
-  main #projects {
+  #projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -623,7 +636,7 @@ main {
     gap: 30px;
   }
 
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -659,6 +672,21 @@ main {
   .footer .footer_left a {
     display: none;
   }
+
+  .hidden {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }
+
 }
 
 @media(max-width:375px) {
@@ -668,17 +696,17 @@ main {
     left: 0;
   }
 
-  main #init-info img {
+  #init-info img {
     width: 290px;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
 
-  main #init-info article h1 {
+  #init-info article h1 {
     font-size: 40px;
   }
 
-  main .main_divisor p::before {
+  .main_divisor p::before {
     content: "";
     display: block;
     position: absolute;
@@ -687,7 +715,7 @@ main {
     width: 140%;
   }
 
-  main .main_divisor P::after {
+  .main_divisor P::after {
     content: "";
     display: block;
     position: absolute;
@@ -696,7 +724,7 @@ main {
     width: 140%;
   }
 
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -819,15 +847,18 @@ main {
     width: 95%;
   }
 
+
   main #init-info img {
-    width: 250px;
+    width: 220px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
   }
 
-  main #init-info article h1 {
+  #init-info article h1 {
     font-size: 35px;
   }
 
-  main .main_divisor p::before {
+  .main_divisor p::before {
     content: "";
     display: block;
     position: absolute;
@@ -836,7 +867,7 @@ main {
     width: 100%;
   }
 
-  main .main_divisor P::after {
+  .main_divisor P::after {
     content: "";
     display: block;
     position: absolute;
@@ -845,7 +876,7 @@ main {
     width: 100%;
   }
 
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -879,16 +910,3 @@ main {
 
 
 /*transitions Js with Sass*/
-
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}

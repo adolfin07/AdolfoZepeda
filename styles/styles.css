@@ -156,7 +156,7 @@ main a {
 #projects div {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 40%;
   height: 300px;
   margin-bottom: 100px;
 }
@@ -370,6 +370,19 @@ main a {
   border-bottom: 1px solid white;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 /*responsive*/
 @media (max-width: 1024px) {
   header {
@@ -409,12 +422,12 @@ main a {
   }
 }
 @media (max-width: 768px) {
-  main #init-info img {
+  #init-info img {
     width: 250px;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -477,14 +490,14 @@ main a {
     text-align: center;
     padding: 7px 0px;
   }
-  main #init-info {
+  #init-info {
     display: flex;
     flex-direction: column;
   }
-  main #init-info article {
+  #init-info article {
     text-align: center;
   }
-  main #init-info article {
+  #init-info article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -506,7 +519,7 @@ main a {
     top: 50%;
     width: 170%;
   }
-  main #projects {
+  #projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -514,7 +527,7 @@ main a {
     border-top: 50px;
     gap: 30px;
   }
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -543,6 +556,18 @@ main a {
   .footer .footer_left a {
     display: none;
   }
+  .hidden {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }
 }
 @media (max-width: 375px) {
   header button {
@@ -550,15 +575,15 @@ main a {
     top: 150%;
     left: 0;
   }
-  main #init-info img {
+  #init-info img {
     width: 290px;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
-  main #init-info article h1 {
+  #init-info article h1 {
     font-size: 40px;
   }
-  main .main_divisor p::before {
+  .main_divisor p::before {
     content: "";
     display: block;
     position: absolute;
@@ -566,7 +591,7 @@ main a {
     top: 50%;
     width: 140%;
   }
-  main .main_divisor P::after {
+  .main_divisor P::after {
     content: "";
     display: block;
     position: absolute;
@@ -574,7 +599,7 @@ main a {
     top: 50%;
     width: 140%;
   }
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -676,12 +701,14 @@ main a {
     width: 95%;
   }
   main #init-info img {
-    width: 250px;
+    width: 220px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
   }
-  main #init-info article h1 {
+  #init-info article h1 {
     font-size: 35px;
   }
-  main .main_divisor p::before {
+  .main_divisor p::before {
     content: "";
     display: block;
     position: absolute;
@@ -689,7 +716,7 @@ main a {
     top: 50%;
     width: 100%;
   }
-  main .main_divisor P::after {
+  .main_divisor P::after {
     content: "";
     display: block;
     position: absolute;
@@ -697,7 +724,7 @@ main a {
     top: 50%;
     width: 100%;
   }
-  main #projects div {
+  #projects div {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -723,16 +750,4 @@ main a {
     font-size: 9px;
   }
 }
-/*transitions Js with Sass*/
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}/*# sourceMappingURL=styles.css.map */
+/*transitions Js with Sass*//*# sourceMappingURL=styles.css.map */
