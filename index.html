@@ -5,39 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adolfo Zepeda</title>
-
-  <!-- icono de la pagina -->
+  <!--webicon-->
   <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon" />
-
-  <!-- importa los estilos de la pagina -->
+  <!--import styles-->
   <link rel="stylesheet" href="styles/styles.css" />
-
-  <!-- importa los scripts de la pagina -->
+  <!--script javascript-->
   <script src="scripts/script.js" type="module" defer></script>
-
-  <!-- importa los iconos de la pagina -->
+  <!--fontawesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--immport animations-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
   <!--menu-->
-  <header id="header">
-    <nav>
-      <a href="#init-info">Init</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#tools">Tools</a>
-      <a href="https://www.instagram.com/adolfin07/" target="_blank">
-        Contact
-      </a>
-    </nav>
+  <header id="header" class="respmenu">
+    <i class="fa-solid fa-bars" id="abrir-menu"></i>
+    <i class="fas fa-times" id="close-icon"></i>
+
+
+      <nav id="nav-menu">
+        <a href="#init-info">Init</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="https://www.instagram.com/adolfin07/" target="_blank">Contact</a>
+      </nav>
+
+
+
     <button id="change-theme-website">
       <i class="fa-solid fa-moon"></i>
     </button>
   </header>
+
 
   <!--main-->
   <main>
@@ -60,7 +64,7 @@
     </div>
     <!-- proyectos -->
     <section id="projects">
-      <div>
+      <div class="article1">
         <article>
           <img src="images/technologies/html5.svg" />
           <img src="images/technologies/sass.svg" />
@@ -74,7 +78,7 @@
         </a>
       </div>
       <div>
-        <article>
+        <article class="article2">
           <img src="images/technologies/html5.svg" />
           <img src="images/technologies/css.svg" />
         </article>
@@ -129,7 +133,7 @@
         <li><i class="fa-solid fa-desktop"></i>Systems Engineering Student</li>
         <li><i class="fa-solid fa-circle-up"></i>21 Years</li>
         <li><i class="fa-solid fa-face-grin-squint"></i>Clown Complex</li>
-        <li><i class="fa-solid fa-gamepad"></i>Valorant Player</li>
+        <li><i class="fa-solid fa-gamepad"></i>Fortnite Player</li>
         <li><i class="fa-solid fa-graduation-cap"></i>Always Learning</li>
       </ul>
     </div>

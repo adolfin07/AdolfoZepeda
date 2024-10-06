@@ -28,3 +28,16 @@ document
       ? LightMode()
       : DarkMode();
   });
+
+  document.getElementById('menu-icon').addEventListener('click', function() {
+    document.getElementById('nav-menu').style.display = 'block';
+    document.getElementById('menu-icon').style.display = 'none';
+    document.getElementById('close-icon').style.display = 'block';
+});
+
+document.getElementById('close-icon').addEventListener('click', function() {
+    document.getElementById('nav-menu').style.display = 'none';
+    document.getElementById('menu-icon').style.display = 'block';
+    document.getElementById('close-icon').style.display = 'none';
+});
+

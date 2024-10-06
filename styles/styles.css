@@ -30,7 +30,9 @@ body {
 
 /*header*/
 header {
+  border: 1px solid red;
   position: fixed;
+  justify-content: space-between;
   display: flex;
   align-items: center;
   top: 20px;
@@ -158,6 +160,7 @@ main #projects {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 80px;
+  border-top: 50px;
   gap: 50px;
 }
 main #projects div {
@@ -165,6 +168,7 @@ main #projects div {
   flex-direction: column;
   width: 450px;
   height: 300px;
+  margin-bottom: 100px;
 }
 main #projects div article {
   width: 250px;
@@ -389,4 +393,336 @@ main .main_divisor P::after {
 }
 .footer .footer_right a:hover {
   border-bottom: 1px solid white;
+}
+
+/*responsive*/
+@media (max-width: 1024px) {
+  header {
+    width: 70%;
+  }
+  header nav a {
+    text-decoration: none;
+    color: var(--color);
+    font-size: 15px;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    width: 9.5%;
+    text-align: center;
+    padding: 7px 0px;
+  }
+  .techs div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .footer .footer_left {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .footer_left p {
+    font-size: 13px;
+  }
+  .footer .footer_right {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  main #init-info img {
+    width: 250px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+  }
+  main #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+  header nav a {
+    text-decoration: none;
+    color: var(--color);
+    font-size: 13px;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    width: 13%;
+    text-align: center;
+    padding: 7px 0px;
+  }
+  .about_me .about-me_left {
+    justify-content: center;
+  }
+  .about_me .about-me_left img {
+    margin-right: 0;
+    width: 70%;
+  }
+  .techs div {
+    width: 65%;
+  }
+  .footer .footer_left p {
+    font-size: 11px;
+  }
+  .footer .footer_right a {
+    font-size: 11px;
+  }
+}
+@media (max-width: 435px) {
+  header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 40px;
+    justify-content: space-between;
+  }
+  main #init-info {
+    display: flex;
+    flex-direction: column;
+  }
+  main #init-info article {
+    text-align: center;
+  }
+  main #init-info article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  main .main_divisor p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -170%;
+    top: 50%;
+    width: 160%;
+  }
+  main .main_divisor P::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    width: 170%;
+  }
+  main #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    border-top: 50px;
+    gap: 30px;
+  }
+  main #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 250px;
+    margin-bottom: 100px;
+  }
+  .about_me {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  .techs div {
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer .footer_left {
+    width: 100%;
+  }
+  .footer .footer_right {
+    width: 50%;
+  }
+  .footer .footer_left a {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  main #init-info img {
+    width: 290px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+  }
+  main #init-info article h1 {
+    font-size: 40px;
+  }
+  main .main_divisor p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150%;
+    top: 50%;
+    width: 140%;
+  }
+  main .main_divisor P::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    width: 140%;
+  }
+  main #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 235px;
+    margin-bottom: 50px;
+  }
+  .techs div .i_cons {
+    width: 100%;
+  }
+  .techs div .i_cons a i {
+    font-size: 40px;
+  }
+  .techs div i {
+    font-size: 40px;
+  }
+}
+@media (max-width: 435px) {
+  header {
+    top: 50px;
+  }
+  main #init-info {
+    flex-direction: column;
+  }
+  main #init-info article {
+    align-items: center;
+  }
+  main .main_divisor p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -160%;
+    top: 50%;
+    width: 150%;
+  }
+  main .main_divisor P::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    width: 150%;
+  }
+  main #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 345px;
+    height: 240px;
+    margin-bottom: 40px;
+  }
+  .about_me {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .techs div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .techs div .i_cons a i {
+    font-size: 35px;
+  }
+  .techs div i {
+    font-size: 35px;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer .footer_left {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .footer_right {
+    width: 50%;
+  }
+  .footer .footer_left p {
+    font-size: 11px;
+    text-align: center;
+  }
+  .footer .footer_right a {
+    font-size: 11px;
+  }
+  .footer .footer_left a {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  main #init-info img {
+    width: 250px;
+  }
+  main #init-info article h1 {
+    font-size: 35px;
+  }
+  main .main_divisor p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -110%;
+    top: 50%;
+    width: 100%;
+  }
+  main .main_divisor P::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    width: 100%;
+  }
+  main #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 220px;
+    margin-bottom: 40px;
+  }
+  .about_me {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .techs div .i_cons a i {
+    font-size: 35px;
+  }
+  .techs div i {
+    font-size: 35px;
+  }
+  .footer .footer_left p {
+    font-size: 9px;
+  }
+  .footer .footer_right a {
+    font-size: 9px;
+  }
+}
+/*extras*/
+#abrir-menu,
+#close-icon {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
