@@ -29,15 +29,18 @@ document
       : DarkMode();
   });
 
-  document.getElementById('menu-icon').addEventListener('click', function() {
-    document.getElementById('nav-menu').style.display = 'block';
-    document.getElementById('menu-icon').style.display = 'none';
-    document.getElementById('close-icon').style.display = 'block';
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  })
+
 });
 
-document.getElementById('close-icon').addEventListener('click', function() {
-    document.getElementById('nav-menu').style.display = 'none';
-    document.getElementById('menu-icon').style.display = 'block';
-    document.getElementById('close-icon').style.display = 'none';
-});
-
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
