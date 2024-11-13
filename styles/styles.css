@@ -632,8 +632,19 @@ main a {
     position: fixed;
     align-items: center;
     top: 40px;
+    padding: 0 10px;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
+  }
+  header button {
+    width: 40px;
+    height: 40px;
+    color: var(--color);
+    border: var(--border);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
   }
   header nav {
     display: flex;
@@ -653,6 +664,17 @@ main a {
   #init-info {
     display: flex;
     flex-direction: column;
+  }
+  main #init-info img {
+    width: 250px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+  }
+  main #init-info article h1 {
+    font-size: 45px;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
   }
   #init-info article {
     text-align: center;
@@ -694,6 +716,18 @@ main a {
     height: 250px;
     margin-bottom: 100px;
   }
+  .divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 1px;
+    background-color: var(--color);
+    margin-bottom: 60px;
+    scroll-margin-top: 120px;
+    border-top: 1px solid var(--color);
+  }
   .about_me {
     margin-top: 40px;
     display: flex;
@@ -730,6 +764,13 @@ main a {
   }
 }
 @media (max-width: 375px) {
+  header nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+  }
   header button {
     position: absolute;
     top: 150%;
@@ -774,6 +815,14 @@ main a {
   }
   .techs div i {
     font-size: 40px;
+  }
+}
+@media (max-width: 375px) and (max-width: 375px) {
+  header button {
+    position: absolute;
+    top: 1200%;
+    left: 0;
+    border: 1px solid var(--color);
   }
 }
 @media (max-width: 435px) {
@@ -858,7 +907,10 @@ main a {
     align-items: center;
     top: 40px;
     justify-content: space-between;
-    width: 95%;
+    width: 89%;
+  }
+  header nav a {
+    font-size: 11px;
   }
   main #init-info img {
     width: 220px;
