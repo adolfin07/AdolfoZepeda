@@ -1012,7 +1012,7 @@ main {
 
   #barsBtn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -1022,7 +1022,7 @@ main {
 
   #xBtn {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -1129,7 +1129,7 @@ main {
 
   #barsBtn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -1139,7 +1139,7 @@ main {
 
   #xBtn {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;

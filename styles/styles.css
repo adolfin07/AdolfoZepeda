@@ -858,7 +858,7 @@ main a {
   }
   #barsBtn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -866,7 +866,7 @@ main a {
   }
   #xBtn {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -953,7 +953,7 @@ main a {
   }
   #barsBtn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
@@ -961,7 +961,7 @@ main a {
   }
   #xBtn {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2%;
     font-size: 25px;
