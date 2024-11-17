@@ -54,3 +54,31 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+var openBtn = document.getElementById('barsBtn');
+var closeBtn = document.getElementById('xBtn');
+var header = document.getElementById('header');
+
+openBtn.addEventListener('click', () => {
+
+  header.classList.add('openNav');
+  header.classList.remove('closeNav');
+  console.log('open clicked');
+
+  openBtn.style.display = "none";
+  closeBtn.style.display = "block";
+
+});
+
+
+closeBtn.addEventListener('click', () => {
+
+  header.classList.add('closeNav')
+  header.classList.remove('openNav');
+  console.log('closed clicked');
+
+  openBtn.style.display = "block";
+  closeBtn.style.display = "none";
+
+});
+

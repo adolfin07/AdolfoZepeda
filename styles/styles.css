@@ -36,20 +36,21 @@ header {
   justify-content: space-between;
   display: flex;
   align-items: center;
-  top: 20px;
-  width: 100%;
-  max-width: 1220px;
-  height: 60px;
+  top: 21%;
+  left: 2%;
+  width: 3.5%;
+  height: 55%;
   border: var(--border);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  padding: 0px 12px 0px 20px;
-  border-radius: 6px;
+  padding: 0px 0px 0px 0px;
+  border-radius: 60px;
   z-index: 100;
   box-shadow: var(--box-shadow);
 }
 header nav {
   display: flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   gap: 30px;
@@ -57,22 +58,20 @@ header nav {
 header nav a {
   text-decoration: none;
   color: var(--color);
-  font-size: 15px;
-  border-radius: 5px;
+  font-size: 22px;
   transition: all 300ms ease;
-  width: 7%;
+  width: 100%;
   text-align: center;
   padding: 7px 0px;
 }
 header nav a:hover {
-  background-color: var(--color);
-  color: var(--background);
+  color: #8d1b1b;
 }
 header button {
   width: 40px;
   height: 40px;
   color: var(--color);
-  border: var(--border);
+  border: none;
   background: transparent;
   cursor: pointer;
   border-radius: 4px;
@@ -80,9 +79,10 @@ header button {
 header button i {
   font-size: 20px;
   color: var(--color);
+  transition: all 300ms ease;
 }
-header button:hover {
-  background-color: var(--hover);
+header button i:hover {
+  color: #8d1b1b;
 }
 
 /*main*/
@@ -103,8 +103,10 @@ main #init-info {
 }
 main #init-info img {
   width: 300px;
-  border-radius: 100%;
+  border-radius: 50%;
+  height: 300px;
   box-shadow: var(--shadow);
+  animation-duration: 2s;
 }
 main #init-info article {
   display: flex;
@@ -543,10 +545,26 @@ main a {
   box-shadow: 2vmin 0 0.494076032vmin currentColor;
 }
 
+#barsBtn {
+  display: none;
+}
+
+#xBtn {
+  display: none;
+}
+
 /*responsive*/
 @media (max-width: 1024px) {
   header {
-    width: 70%;
+    left: 25%;
+    top: 5%;
+    width: 50%;
+    height: 7%;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   header nav a {
     text-decoration: none;
@@ -582,6 +600,12 @@ main a {
   }
 }
 @media (max-width: 768px) {
+  header {
+    left: 25.5%;
+    top: 5%;
+    width: 50%;
+    height: 7%;
+  }
   #init-info img {
     width: 250px;
     border-radius: 100%;
@@ -627,20 +651,47 @@ main a {
     font-size: 11px;
   }
 }
-@media (max-width: 435px) {
+@media (max-width: 768px) and (max-width: 425px) {
+  .fa-moon {
+    border: none;
+    padding: 0;
+  }
+  header {
+    left: 5%;
+    top: 5%;
+    width: 50%;
+    height: 7%;
+  }
+  #barsBtn {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #xBtn {
+    display: none;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+  }
   header {
     position: fixed;
     align-items: center;
-    top: 40px;
+    top: 0px;
     padding: 0 10px;
     justify-content: space-between;
     width: 90%;
+    left: -100%;
   }
   header button {
     width: 40px;
     height: 40px;
     color: var(--color);
-    border: var(--border);
+    border: none;
     background: transparent;
     cursor: pointer;
     border-radius: 4px;
@@ -667,7 +718,7 @@ main a {
   }
   main #init-info img {
     width: 250px;
-    border-radius: 100%;
+    height: 250px;
     box-shadow: var(--shadow);
   }
   main #init-info article h1 {
@@ -763,69 +814,13 @@ main a {
     transition: none;
   }
 }
-@media (max-width: 375px) {
-  header nav {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
-    padding-right: 10px;
-  }
-  header button {
-    position: absolute;
-    top: 150%;
-    left: 0;
-  }
-  #init-info img {
-    width: 290px;
-    border-radius: 100%;
+@media (max-width: 435px) {
+  main #init-info img {
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
     box-shadow: var(--shadow);
   }
-  #init-info article h1 {
-    font-size: 40px;
-  }
-  .main_divisor p::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -150%;
-    top: 50%;
-    width: 140%;
-  }
-  .main_divisor P::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 110%;
-    top: 50%;
-    width: 140%;
-  }
-  #projects div {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 235px;
-    margin-bottom: 50px;
-  }
-  .techs div .i_cons {
-    width: 100%;
-  }
-  .techs div .i_cons a i {
-    font-size: 40px;
-  }
-  .techs div i {
-    font-size: 40px;
-  }
-}
-@media (max-width: 375px) and (max-width: 375px) {
-  header button {
-    position: absolute;
-    top: 1200%;
-    left: 0;
-    border: 1px solid var(--color);
-  }
-}
-@media (max-width: 435px) {
   header {
     top: 50px;
   }
@@ -901,6 +896,68 @@ main a {
     display: none;
   }
 }
+@media (max-width: 375px) {
+  header nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+  }
+  header button {
+    position: absolute;
+    top: 150%;
+    left: 0;
+  }
+  #init-info img {
+    width: 290px;
+    border-radius: 100%;
+    box-shadow: var(--shadow);
+  }
+  #init-info article h1 {
+    font-size: 40px;
+  }
+  .main_divisor p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150%;
+    top: 50%;
+    width: 140%;
+  }
+  .main_divisor P::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    width: 140%;
+  }
+  #projects div {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 235px;
+    margin-bottom: 50px;
+  }
+  .techs div .i_cons {
+    width: 100%;
+  }
+  .techs div .i_cons a i {
+    font-size: 40px;
+  }
+  .techs div i {
+    font-size: 40px;
+  }
+}
+@media (max-width: 375px) and (max-width: 375px) {
+  header button {
+    position: absolute;
+    top: 1200%;
+    left: 0;
+    border: 1px solid var(--color);
+  }
+}
 @media (max-width: 320px) {
   header {
     position: fixed;
@@ -914,6 +971,7 @@ main a {
   }
   main #init-info img {
     width: 220px;
+    height: 220px;
     border-radius: 100%;
     box-shadow: var(--shadow);
   }
@@ -962,4 +1020,13 @@ main a {
     font-size: 9px;
   }
 }
-/*transitions Js with Sass*//*# sourceMappingURL=styles.css.map */
+/*transitions Js with Sass responsive*/
+.openNav {
+  left: 4.5%;
+  transition: all 300ms ease;
+}
+
+.closeNav {
+  left: -100%;
+  transition: all 300ms ease;
+}/*# sourceMappingURL=styles.css.map */
