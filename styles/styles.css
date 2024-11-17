@@ -624,6 +624,25 @@ main a {
     align-items: center;
     gap: 10px;
   }
+  main #init-info img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    animation-duration: 2s;
+  }
+  main #init-info article h1 {
+    font-size: 40px;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+  }
+  header {
+    left: 19%;
+    top: 5%;
+    width: 65%;
+    height: 7%;
+  }
   header nav a {
     text-decoration: none;
     color: var(--color);
@@ -823,6 +842,35 @@ main a {
   }
   header {
     top: 50px;
+    left: -100%;
+    border-radius: 0;
+    width: 99%;
+  }
+  header button {
+    width: 40px;
+    height: 40px;
+    color: var(--color);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 13%;
+  }
+  #barsBtn {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #xBtn {
+    display: none;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
   }
   main #init-info {
     flex-direction: column;
@@ -896,6 +944,30 @@ main a {
     display: none;
   }
 }
+@media (max-width: 425px) {
+  header {
+    left: -100%;
+    top: 7%;
+    width: 97%;
+    height: 7%;
+  }
+  #barsBtn {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #xBtn {
+    display: none;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
 @media (max-width: 375px) {
   header nav {
     display: flex;
@@ -907,7 +979,7 @@ main a {
   header button {
     position: absolute;
     top: 150%;
-    left: 0;
+    right: 0;
   }
   #init-info img {
     width: 290px;
@@ -950,21 +1022,13 @@ main a {
     font-size: 40px;
   }
 }
-@media (max-width: 375px) and (max-width: 375px) {
-  header button {
-    position: absolute;
-    top: 1200%;
-    left: 0;
-    border: 1px solid var(--color);
-  }
-}
 @media (max-width: 320px) {
   header {
     position: fixed;
     align-items: center;
-    top: 40px;
+    top: 60px;
     justify-content: space-between;
-    width: 89%;
+    width: 95%;
   }
   header nav a {
     font-size: 11px;
@@ -1022,7 +1086,7 @@ main a {
 }
 /*transitions Js with Sass responsive*/
 .openNav {
-  left: 4.5%;
+  left: 1.2%;
   transition: all 300ms ease;
 }
 
