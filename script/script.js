@@ -1,187 +1,3 @@
-// Variables y declaraciones
-let counter = 0;
-const PI = 3.14159;
-let randomArray = [42, "hello", true, null, { key: "value" }];
-var greeting = "Welcome to JavaScript";
-
-// Funciones simples
-function addNumbers(a, b) {
-  return a + b;
-}
-
-function sayHello(name) {
-  console.log(`Hello, ${name}!`);
-}
-
-// Operaciones con arrays
-randomArray.push("new element");
-randomArray.forEach((item, index) => {
-  console.log(`Item ${index}:`, item);
-});
-
-// Manipulación del DOM
-let button = document.createElement("button");
-button.textContent = "Click Me";
-document.body.appendChild(button);
-
-button.addEventListener("click", () => {
-  alert("Button clicked!");
-});
-
-// Generar números aleatorios
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-// Bucles
-for (let i = 0; i < 10; i++) {
-  console.log(`Iteration ${i}`);
-}
-
-while (counter < 5) {
-  console.log(`Counter is at: ${counter}`);
-  counter++;
-}
-
-// Objetos y métodos
-const person = {
-  name: "John",
-  age: 30,
-  greet() {
-    console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
-  },
-};
-
-person.greet();
-
-// Promesas y temporizadores
-const fetchData = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Data fetched!");
-    }, 2000);
-  });
-};
-
-fetchData().then((data) => console.log(data));
-
-// Condicionales
-if (PI > 3) {
-  console.log("PI is greater than 3.");
-} else {
-  console.log("PI is less than or equal to 3.");
-}
-
-// Clase simple
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-
-  area() {
-    return this.width * this.height;
-  }
-}
-
-let myRectangle = new Rectangle(5, 10);
-console.log(`Area of rectangle: ${myRectangle.area()}`);
-
-// Más DOM
-let div = document.createElement("div");
-div.style.width = "100px";
-div.style.height = "100px";
-div.style.backgroundColor = "blue";
-document.body.appendChild(div);
-
-div.addEventListener("mouseover", () => {
-  div.style.backgroundColor = "red";
-});
-
-div.addEventListener("mouseout", () => {
-  div.style.backgroundColor = "blue";
-});
-
-// Uso de Map
-let map = new Map();
-map.set("key1", "value1");
-map.set("key2", "value2");
-
-map.forEach((value, key) => {
-  console.log(`Key: ${key}, Value: ${value}`);
-});
-
-// Fechas
-let now = new Date();
-console.log(`Current date and time: ${now}`);
-
-// Más funciones
-const factorial = (n) => {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
-};
-
-console.log(`Factorial of 5: ${factorial(5)}`);
-
-// JSON
-let jsonData = JSON.stringify({ name: "Alice", age: 25 });
-console.log(`JSON Data: ${jsonData}`);
-
-let parsedData = JSON.parse(jsonData);
-console.log(`Parsed Data:`, parsedData);
-
-// Set
-let uniqueNumbers = new Set([1, 2, 3, 3, 4]);
-console.log(`Set size: ${uniqueNumbers.size}`);
-
-// Generadores
-function* numberGenerator() {
-  let i = 1;
-  while (i <= 5) {
-    yield i++;
-  }
-}
-
-const gen = numberGenerator();
-for (let num of gen) {
-  console.log(num);
-}
-
-// Fetch API (simulado)
-function simulateFetch(url) {
-  console.log(`Fetching from ${url}...`);
-  setTimeout(() => {
-    console.log("Data received!");
-  }, 1000);
-}
-
-simulateFetch("https://api.example.com");
-
-// LocalStorage
-localStorage.setItem("username", "Guest");
-console.log(`Username: ${localStorage.getItem("username")}`);
-
-// Eventos del teclado
-document.addEventListener("keydown", (event) => {
-  console.log(`Key pressed: ${event.key}`);
-});
-
-// CSS dinámico
-div.style.border = "5px solid black";
-
-// Aleatorizar un array
-function shuffleArray(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
-
-console.log(shuffleArray([1, 2, 3, 4, 5]));
-
-// Finalizar con una despedida
-console.log("End of 150 lines of random JavaScript!");
-
-
-var bgFixed = document.getElementById('backspan');
-var header = document.getElementById('header');
 
 document
   .getElementById("change-theme-website")
@@ -205,7 +21,7 @@ document
       root.style.setProperty("--color", "black");
       root.style.setProperty("--border", "solid 1px #141414");
       root.style.setProperty("--box-shadow", "2px 2px 4px 0px #141414");
-      bgFixed.style.background = ' rgb(235, 235, 235)';
+      bgFixed.style.background = ' rgb(196, 196, 196)';
 
     }
 
@@ -263,4 +79,44 @@ closeBtn.addEventListener('click', () => {
 
 });
 
+//observerleft
+const observerLeft = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('showLeft');
+      } else {
+          entry.target.classList.remove('showLeft');
+      }
+  });
+});
 
+const hiddenElementsLeft = document.querySelectorAll('.hiddenLeft');
+hiddenElementsLeft.forEach((el) => observerLeft.observe(el));
+
+//observerRight
+const observerRight = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('showRight');
+      } else {
+          entry.target.classList.remove('showRight');
+      }
+  });
+});
+
+const hiddenElementsRight = document.querySelectorAll('.hiddenRight');
+hiddenElementsRight.forEach((el) => observerRight.observe(el));
+
+//observerUp
+const observerUp = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('showUp');
+      } else {
+          entry.target.classList.remove('showUp');
+      }
+  });
+});
+
+const hiddenElementsUp = document.querySelectorAll('.hiddenUp');
+hiddenElementsUp.forEach((el) => observerUp.observe(el));
