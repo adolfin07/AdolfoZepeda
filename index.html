@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="description" content="Front-End Portfolio by Adolfo Zepeda">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PogoDev</title>
@@ -23,11 +24,11 @@
   <!--menu-->
   <header id="header" class="respmenu">
     <nav id="nav-menu">
-      <a href="#init-info"><i class="fa-solid fa-house"></i></a>
-      <a href="#projects"><i class="fa-solid fa-briefcase"></i></a>
-      <a href="#about__content"><i class="fa-solid fa-user"></i></a>
-      <a href="#tools"><i class="fa-solid fa-gear fa-spin"></i></a>
-      <button id="change-theme-website" itemid="btnChange">
+      <a href="#init-info" class="header__btn"><i class="fa-solid fa-house"></i></a>
+      <a href="#projects" class="header__btn"><i class="fa-solid fa-briefcase"></i></a>
+      <a href="#about__content" class="header__btn"><i class="fa-solid fa-user"></i></a>
+      <a href="#tools" class="header__btn"><i class="fa-solid fa-gear fa-spin"></i></a>
+      <button id="change-theme-website" itemid="btnChange" class="header__btn">
         <i class="fa-solid fa-moon"></i>
       </button>
 
@@ -44,7 +45,7 @@
   <main>
     <!-- inicial -->
     <section id="init-info">
-      <img src="images/weblogo.jpg" class="animate__animated animate__flash" />
+      <img src="images/weblogo.jpg" alt="web-icon" class="animate__animated animate__flash" />
       <article class="animate__animated animate__fadeInRightBig">
         <a href="https://github.com/adolfin07" target="_blank">
           <button id="gitBtn">
@@ -67,12 +68,12 @@
   <section id="projects">
     <div class="hidden">
       <article>
-        <img src="images/languajes/html5.svg" />
-        <img src="images/languajes/sass.svg" />
-        <img src="images/languajes/javascript.svg" />
+        <img alt="html-icon" src="images/languajes/html5.svg" />
+        <img alt="sass-icon" src="images/languajes/sass.svg" />
+        <img alt="javascript-icon" src="images/languajes/javascript.svg" />
       </article>
       <a target="_blank" href="https://adolfin07.github.io/cardValidator/">
-        <img src="images/projects/cardValidator.jpg" />
+        <img alt="proyect-img" src="images/projects/cardValidator.jpg" />
         <span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </span>
@@ -80,12 +81,12 @@
     </div>
     <div class="hidden">
       <article class="article2">
-        <img src="images/languajes/html5.svg" />
-        <img src="images/languajes/sass.svg" />
-        <img src="images/languajes/javascript.svg" />
+        <img alt="html-icon" src="images/languajes/html5.svg" />
+        <img alt="sass-icon" src="images/languajes/sass.svg" />
+        <img alt="javascript-icon" src="images/languajes/javascript.svg" />
       </article>
       <a target="_blank" href="https://adolfin07.github.io/PogoFuture/">
-        <img src="images/projects/pogoFuture.jpg" />
+        <img alt="proyect-img" src="images/projects/pogoFuture.jpg" />
         <span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </span>
@@ -93,12 +94,12 @@
     </div>
     <div class="hidden">
       <article>
-        <img src="images/languajes/html5.svg" />
-        <img src="images/languajes/sass.svg" />
-        <img src="images/languajes/javascript.svg" />
+        <img alt="html-icon" src="images/languajes/html5.svg" />
+        <img alt="sass-icon" src="images/languajes/sass.svg" />
+        <img alt="javascript-icon" src="images/languajes/javascript.svg" />
       </article>
       <a target="_blank" href="https://adolfin07.github.io/ReivajCell/">
-        <img src="images/projects/reivajCell.jpg" />
+        <img alt="proyect-img" src="images/projects/reivajCell.jpg" />
         <span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </span>
@@ -106,12 +107,12 @@
     </div>
     <div class="hidden">
       <article>
-        <img src="images/languajes/html5.svg" />
-        <img src="images/languajes/css.svg" />
-        <img src="images/languajes/javascript.svg" />
+        <img alt="html-icon" src="images/languajes/html5.svg" />
+        <img alt="css-icon" src="images/languajes/css.svg" />
+        <img alt="javascript-icon" src="images/languajes/javascript.svg" />
       </article>
       <a target="_blank" href="https://adolfin07.github.io/VictorBurger/">
-        <img src="images/projects/victorBurger.jpg" />
+        <img alt="proyect-img" src="images/projects/victorBurger.jpg" />
         <span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </span>
@@ -126,7 +127,7 @@
   <section id="about" class="about">
     <div id="about__content" class="about__content">
       <div class="about__left hiddenLeft">
-        <img class="img1web" src="images/img1.jpg" alt="">
+        <img class="img1web" src="images/img1.jpg" alt="web-icon">
       </div>
       <div class="about__right hiddenRight">
         <span class="spanRed">
@@ -154,8 +155,8 @@
     <div class="tech-ident social hiddenUp">
       <h3>Find Me</h3>
       <div class="i_cons">
-        <a href="#" class="float" target="_blank"><img src="images/social/instagram_dark.svg" alt=""></a>
-        <a href="#" class="float2" target="_blank"><img src="images/techs/github-dark.svg" alt=""></a>
+        <a href="#" class="float" target="_blank"><img src="images/social/instagram_dark.svg" alt="instagram-logo"></a>
+        <a href="#" class="float2" target="_blank"><img src="images/techs/github-dark.svg" alt="github-logo"></a>
       </div>
 
     </div>
@@ -163,11 +164,10 @@
     <div class="tech-ident resources hiddenUp">
       <h3>Resources</h3>
       <div class="i_cons">
-        <img class="float" src="images/techs/git.svg" alt="">
-        <img class="float" src="images/techs/github-dark.svg" alt="">
-        <img class="float2" src="images/techs/vscode.svg" alt="">
-        <img class="float" src="images/techs/windows.svg" alt="">
-        <img class="float2" src="images/techs/git.svg" alt="">
+        <img class="float" src="images/techs/git.svg" alt="git-logo">
+        <img class="float" src="images/techs/github-dark.svg" alt="github-logo">
+        <img class="float2" src="images/techs/vscode.svg" alt="vscode-logo">
+        <img class="float" src="images/techs/windows.svg" alt="microsoft-logo">
       </div>
 
     </div>
@@ -175,10 +175,10 @@
     <div class="tech-ident lenguajes hiddenUp">
       <h3>Languages</h3>
       <div class="i_cons">
-        <img class="float" src="images/languajes/css.svg" alt="">
-        <img class="float2" src="images/languajes/html5.svg" alt="">
-        <img class="float" src="images/languajes/sass.svg" alt="">
-        <img class="float" src="images/languajes/javascript.svg" alt="">
+        <img class="float" src="images/languajes/css.svg" alt="css-icon">
+        <img class="float2" src="images/languajes/html5.svg" alt="html-icon">
+        <img class="float" src="images/languajes/sass.svg" alt="sass-icon">
+        <img class="float" src="images/languajes/javascript.svg" alt="javascript-icon">
       </div>
 
     </div>
@@ -218,3 +218,4 @@
 </body>
 
 </html>
+

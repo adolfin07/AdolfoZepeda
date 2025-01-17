@@ -51,42 +51,14 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-
-var openBtn = document.getElementById('barsBtn');
-var closeBtn = document.getElementById('xBtn');
-var header = document.getElementById('header');
-
-openBtn.addEventListener('click', () => {
-
-  header.classList.add('openNav');
-  header.classList.remove('closeNav');
-  console.log('open clicked');
-
-  openBtn.style.display = "none";
-  closeBtn.style.display = "block";
-
-});
-
-
-closeBtn.addEventListener('click', () => {
-
-  header.classList.add('closeNav')
-  header.classList.remove('openNav');
-  console.log('closed clicked');
-
-  openBtn.style.display = "block";
-  closeBtn.style.display = "none";
-
-});
-
 //observerleft
 const observerLeft = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('showLeft');
-      } else {
-          entry.target.classList.remove('showLeft');
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add('showLeft');
+    } else {
+      entry.target.classList.remove('showLeft');
+    }
   });
 });
 
@@ -96,11 +68,11 @@ hiddenElementsLeft.forEach((el) => observerLeft.observe(el));
 //observerRight
 const observerRight = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('showRight');
-      } else {
-          entry.target.classList.remove('showRight');
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add('showRight');
+    } else {
+      entry.target.classList.remove('showRight');
+    }
   });
 });
 
@@ -110,13 +82,53 @@ hiddenElementsRight.forEach((el) => observerRight.observe(el));
 //observerUp
 const observerUp = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('showUp');
-      } else {
-          entry.target.classList.remove('showUp');
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add('showUp');
+    } else {
+      entry.target.classList.remove('showUp');
+    }
   });
 });
 
 const hiddenElementsUp = document.querySelectorAll('.hiddenUp');
 hiddenElementsUp.forEach((el) => observerUp.observe(el));
+
+
+//navbar responsive
+var openBtn = document.getElementById('barsBtn');
+var closeBtn = document.getElementById('xBtn');
+var header = document.getElementById('header');
+
+let headerBtn = document.querySelectorAll(".header__btn")
+
+openBtn.addEventListener('click', () => {
+
+  header.classList.add('openNav');
+  header.classList.remove('closeNav');
+
+
+  openBtn.style.display = "none";
+  closeBtn.style.display = "block";
+
+});
+
+closeBtn.addEventListener('click', () => {
+
+  header.classList.add('closeNav')
+  header.classList.remove('openNav');
+
+
+  openBtn.style.display = "block";
+  closeBtn.style.display = "none";
+
+});
+
+headerBtn.addEventListener("click", () => {
+  header.classList.add('closeNav')
+  header.classList.remove('openNav');
+
+
+  openBtn.style.display = "block";
+  closeBtn.style.display = "none";
+});
+
