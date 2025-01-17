@@ -99,36 +99,52 @@ var openBtn = document.getElementById('barsBtn');
 var closeBtn = document.getElementById('xBtn');
 var header = document.getElementById('header');
 
-let headerBtn = document.querySelectorAll(".header__btn")
+let menu = document.querySelectorAll("#nav-menu a");
 
 openBtn.addEventListener('click', () => {
 
-  header.classList.add('openNav');
-  header.classList.remove('closeNav');
-
-
-  openBtn.style.display = "none";
-  closeBtn.style.display = "block";
+  openNav();
 
 });
 
 closeBtn.addEventListener('click', () => {
 
-  header.classList.add('closeNav')
-  header.classList.remove('openNav');
-
-
-  openBtn.style.display = "block";
-  closeBtn.style.display = "none";
+  closeNav();
 
 });
 
-headerBtn.addEventListener("click", () => {
-  header.classList.add('closeNav')
-  header.classList.remove('openNav');
-
-
-  openBtn.style.display = "block";
-  closeBtn.style.display = "none";
+menu.forEach(menu => {
+  menu.addEventListener("click", (e) => {
+    closeNav();
+  });
 });
 
+
+//closenav func
+function closeNav() {
+  let viewportWidth = window.innerWidth;
+  if (viewportWidth < 780) {
+    header.classList.add('closeNav')
+    header.classList.remove('openNav');
+
+
+    openBtn.style.display = "block";
+    closeBtn.style.display = "none";
+  }
+
+}
+
+//opennav func
+function openNav() {
+  let viewportWidth = window.innerWidth;
+
+  if (viewportWidth < 780) {
+    header.classList.add('openNav');
+    header.classList.remove('closeNav');
+
+    openBtn.style.display = "none";
+    closeBtn.style.display = "block";
+  } else {
+    console.log("else");
+  }
+}
